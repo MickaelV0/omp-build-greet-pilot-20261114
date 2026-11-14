@@ -1,0 +1,23 @@
+schema_version: "1.0"
+runtime: bun
+package_manager: bun
+build:
+  orchestrator: none
+  formatter: biome
+  formatter_config: biome.json
+testing:
+  unit: bun
+  e2e: none
+hooks:
+  tool: none
+deploy:
+  platform: none
+release:
+  model: trunk
+  component: greet
+landing:
+  mode: native
+commands:
+  install: bun install --frozen-lockfile
+  worktree_setup: bun install --frozen-lockfile
+  lint: bun run lint
