@@ -1,6 +1,6 @@
 # omp-build greet pilot
 
-Private, isolated preparation repository for omp-build 0.19.0. No UW has been created or started.
+Public, isolated preparation repository for a fictitious omp-build pilot. No UW has been created or started.
 
 ## Pilot objective
 
@@ -14,16 +14,18 @@ The CLI is deliberately not implemented in this preparation commit. Its UW must 
 - `bun install --frozen-lockfile` installs the development tools.
 - `bun run lint` checks formatting and lint rules.
 - GitHub Actions use immutable action commits and read-only contents permission.
-- `OMP_BUILD_TOOLING_SHA` on this repository pins Roxabi/roxabi-plugins commit `97217aecf672aaeb5ec074a13f72266cb074c991`, carrying omp-build 0.19.0. The source repository and its pin are unchanged.
+- The repository variable `OMP_BUILD_TOOLING_SHA` is the authority for the selected Roxabi/roxabi-plugins commit. The principal installation and its pin are separate from this pilot.
 
 ## Official initialization boundary
 
-Use the existing OMP session and `/move` to the linked `-setup` checkout, not a second OMP process. Run `/feature init` for the official preview. It proposes the test command and tracker contract/labels without applying them. Apply only with the digest from that preview and a genuine operator reply using `/feature init --approve <digest> --operator-approval '<operator reply>'`.
+Use the existing OMP session and `/move` to the linked `-setup` checkout, not a second OMP process. Run `/feature init` for the official preview. It proposes the test command and tracker contract/labels without applying them. Never approve a withheld or incomplete plan. Apply only after a complete native preview, with its digest and a separate genuine operator reply using `/feature init --approve <digest> --operator-approval '<operator reply>'`.
 
 Init application refuses a principal checkout. Do not override that refusal; the linked setup worktree exists for this reason. Commit and publish approved initialization changes before starting the feature. Do not call worktree bootstrap separately: the native feature lifecycle owns it.
 
-The official preview was executed with the installed script and its documented script-directory cwd. It identified this repository but withheld the tracker with `issue-triage missing (... Cannot detect GitHub repo. Set GITHUB_REPO env var or ensure git remote "origin" is configured.)`. No approval was supplied and no tracker contract, labels, or UW were written. Do not approve that incomplete plan or use its digest. Resolve the official initialization path before requesting a fresh native preview; the plugin and session environment have not been patched.
+Do not bypass an incomplete preview, native approval, or any initialization refusal with a manual substitute.
 
-## Known hosting blocker
+## Hosting and landing
 
-GitHub Free refuses branch protection for this private repository (HTTP 403), and `allow_auto_merge` remains false. Native landing is not ready. Keep the repository private; upgrade the hosting plan or resolve capabilities explicitly before delivery. Do not replace native landing with a manual merge, loosen checks, or bypass an engine refusal.
+The pilot repository is public. Auto-merge is enabled; merge commits are allowed, while squash and rebase merges are disabled. The `main` branch requires a pull request, the GitHub Actions `Tooling` check with strict up-to-date status, and resolved conversations. Protection applies to administrators and disallows force-pushes and branch deletion; no human approval is required by GitHub.
+
+The `Tooling` check covers the baseline tooling only, not the greeting behavior. Do not replace native landing with a manual merge, loosen checks, or bypass an engine refusal.
