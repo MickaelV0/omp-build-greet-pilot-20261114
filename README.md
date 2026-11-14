@@ -11,7 +11,7 @@ The CLI is deliberately not implemented in this preparation commit. Its UW must 
 ## Tooling
 
 - Bun 1.4.4, dependency versions locked in `bun.lock`.
-- `bun install --frozen-lockfile` installs the development tools.
+- `bun install --frozen-lockfile` installs the development tools. `worktree.setup` declares the same command as a shell snippet for native worktree bootstrap; do not call bootstrap separately.
 - `bun run lint` checks formatting and lint rules.
 - GitHub Actions use immutable action commits and read-only contents permission.
 - The repository variable `OMP_BUILD_TOOLING_SHA` is the authority for the selected Roxabi/roxabi-plugins commit. The principal installation and its pin are separate from this pilot.
