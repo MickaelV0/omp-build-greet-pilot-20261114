@@ -21,3 +21,4 @@ commands:
   install: bun install --frozen-lockfile
   worktree_setup: bun install --frozen-lockfile
   lint: bun run lint
+  test: "bun run test"
