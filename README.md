@@ -22,6 +22,8 @@ Use the existing OMP session and `/move` to the linked `-setup` checkout, not a 
 
 Init application refuses a principal checkout. Do not override that refusal; the linked setup worktree exists for this reason. Commit and publish approved initialization changes before starting the feature. Do not call worktree bootstrap separately: the native feature lifecycle owns it.
 
+The official preview was executed with the installed script and its documented script-directory cwd. It identified this repository but withheld the tracker with `issue-triage missing (... Cannot detect GitHub repo. Set GITHUB_REPO env var or ensure git remote "origin" is configured.)`. No approval was supplied and no tracker contract, labels, or UW were written. Do not approve that incomplete plan or use its digest. Resolve the official initialization path before requesting a fresh native preview; the plugin and session environment have not been patched.
+
 ## Known hosting blocker
 
 GitHub Free refuses branch protection for this private repository (HTTP 403), and `allow_auto_merge` remains false. Native landing is not ready. Keep the repository private; upgrade the hosting plan or resolve capabilities explicitly before delivery. Do not replace native landing with a manual merge, loosen checks, or bypass an engine refusal.
